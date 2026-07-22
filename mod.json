@@ -1,0 +1,127 @@
+{
+    // The ID of your project. Should be unique!!
+    "id": "deltalarp_chapter_select",
+    // Displays on the main menu.
+    "name": "DELTALARP",
+    // Displays underneath the name. Optional.
+    "subtitle": "Chapter Select",
+
+    // The version of your project.
+    "version": "v1.0.0",
+    // What version of the engine your project was made with.
+    "engineVer": "v0.11.0-dev",
+
+    // The Deltarune chapter you'd like to base your project off of.
+    // Do keep in mind that you can control chapter-specific features
+    // one by one using the config below.
+    "chapter": 5,
+
+    // The map that you start in when first starting the project.
+    "map": "chapter_select",
+
+    // The party. The first character is the player.
+    "party": ["kris"],
+
+    // The inventory. Contains three darkburgers, a cell phone and a shadow crystal by default.
+    "inventory": {
+        "items": ["glowshard", "darkburger", "darkburger", "darkburger"],
+        "key_items": ["cell_phone", "shadowcrystal"]
+    },
+
+    // Equipment for your party. Not specifying equipment defaults to the following.
+    "equipment": {
+        "kris": {
+            "weapon": "wood_blade",
+            "armor": ["amber_card", "amber_card"]
+        },
+        "susie": {
+            "weapon": "mane_ax",
+            "armor": ["amber_card", "amber_card"]
+        },
+        "ralsei": {
+            "weapon": "red_scarf",
+            "armor": ["amber_card", "amber_card"]
+        }
+    },
+
+    // Should never be true, but just in case. Restarts the entire engine when leaving the project.
+    // If you need this, you're most likely doing something wrong.
+    "hardReset": false,
+
+    // Whether the project is hidden from the project selection.
+    "hidden": false,
+
+    // Whether the game window's title should be set to the project's name, and the icon to the image
+    // in the file `window_icon.png`.
+    // When your project is configured as the engine's target project, it's automatically done unless if
+    // this option is explicitly set to false; else, it's done if this is set to true.
+    "setWindowTitleAndIcon": true,
+
+    // Config values for the engine and any libraries you may have.
+    // These config values can control chapter-specific features as well.
+    "config": {
+        "kristal": {
+            // End of config
+        },
+		"obscurachapters": {
+            "infoAuthor": "", // If not set, defaults to "By: [Mod.info.author]"
+            //"infoProject": "", // If not set, defaults to "[Mod.info.name] v[Mod.info.version]"
+            "include_example": false, // Remove the default ch1 and ch2 (from the lib.json)
+            "chapters":[
+                {
+                    "image": "chapters/ch1",
+                    "name": "THE START",
+                    "sound": "ui_spooky_action",
+                    "mod": "deltalarp_true",
+                },
+                {
+                    "image": "chapters/ch2",
+                    "name": "LEGEND",
+                    "sound": "deathnoise",
+					"unlocked": false,
+					"mod": "deltalarp_ch2",
+                },
+                {
+                    "image": "chapters/ch3",
+                    "name": "BOARD",
+                    "unlocked": false,
+                    "sound": "cardrive",
+					"mod": "deltalarp_ch3",
+                },
+                {
+                    "image": "chapters/ch4",
+                    "unlocked": false,
+                    "name": "MIDNIGHT",
+                    "sound": "bluh",
+					"mod": "deltalarp_ch4",
+                },
+                {
+                    "image": "chapters/ch5",
+                    "name": "ABSENTEE",
+                    "unlocked": false,
+                    "sound": "bluh",
+					"mod": "deltalarp_ch5",
+                },
+                {
+                    "image": "chapters/ch6",
+                    "name": "DOMICILE",
+                    "unlocked": false,
+                    "sound": "bluh",
+                    "index": "6",
+					"mod": "deltalarp_ch6",
+                },
+                {
+                    "image": "chapters/ch7",
+                    "name": "LARPERS' RUNE",
+                    "unlocked": false,
+                    "sound": "bluh",
+                    "mod": "deltalarp_ch7",
+                    "instant": true
+                }
+            ]
+        }
+    },
+
+    // Whether or not to enable dev mode. Dev mode enables debug keys and the console.
+    "dev": true
+}
