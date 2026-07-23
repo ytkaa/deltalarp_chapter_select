@@ -123,5 +123,7 @@
     },
 
     // Whether or not to enable dev mode. Dev mode enables debug keys and the console.
-    "dev": true
+    "dev": true,
+	
+	"useSaves": false
 }
